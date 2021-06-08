@@ -3,13 +3,29 @@
 
 <head>
   <meta charset="UTF-8">
+  <title>Minimal Map Exercise</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   
-  <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.js'></script>
-  <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.css' rel='stylesheet' />
+ 
 
-  <title>Minimal Map Exercise</title>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.css' rel='stylesheet' />
+  <!-- <link rel="stylesheet" type="text/css" href="index.scss" /> this won't load -->
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.js'></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    #map {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+
 </head>
 
 <body data-name="map">
@@ -17,12 +33,11 @@
     <div id="map"></div>
   </div>
 
-  <!-- <script type="text/javascript" src="index.js"></script> -->
-  <!-- <script>
+  <script>
     mapboxgl.accessToken =
       "pk.eyJ1IjoiYWx0YS1kZW52ZXIiLCJhIjoiY2s2czlyeHZlMDB0bzNlcjQ0MnoweGhtayJ9.A_2JYo7d7yPDljD96RCrEQ";
 
-    const map = new mapboxgl.Map({
+    var map = new mapboxgl.Map({
       container: "map",
       style: "mapbox://styles/mapbox/streets-v11",
       zoom: 13,
@@ -67,7 +82,7 @@
         },
       });
     });
-  </script> -->
+  </script>
 </body>
 
 
